@@ -15,7 +15,7 @@ import java.util.zip.ZipInputStream;
 
 /**
  * Simple handler that unzips files when given an input bucket, output bucket, and zip-file name
- *  -- to demonstrate that
+ *  -- to demonstrate that upgrade of bom is preventing unzipping of multiple items to an S3 bucket
  */
 public class UnzippingHandler {
 
