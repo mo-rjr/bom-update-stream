@@ -11,3 +11,7 @@ This seems to be because the S3Client.putObject call is resulting in the closing
 Handler should be
 `uk.gov.metoffice.swfhim.UnzippingHandler::handleRequest`
 and runtime should be Java 11.
+
+
+#### Resolution
+`SuggestedUnzippingHandler` gives a solution suggested by AWS that works in this context.

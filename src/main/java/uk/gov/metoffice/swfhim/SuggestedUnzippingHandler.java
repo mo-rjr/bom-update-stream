@@ -17,7 +17,7 @@ import java.util.zip.ZipInputStream;
  * Simple handler that unzips files when given an input bucket, output bucket, and zip-file name
  *  -- to demonstrate problems with using ZipInputStream when the SDK closes the stream
  */
-public class UnzippingHandler {
+public class SuggestedUnzippingHandler {
 
     private static final S3Client s3Client = S3Client.create();
 
@@ -66,7 +66,7 @@ public class UnzippingHandler {
                 .key(fileKey)
                 .build();
         s3Client.putObject(putObjectRequest,
-                RequestBody.fromContentProvider(() -> zipInputStream, entrySize, "text/xml"));
+                RequestBody.fromInputStream(zipInputStream, entrySize));
     }
 
 
