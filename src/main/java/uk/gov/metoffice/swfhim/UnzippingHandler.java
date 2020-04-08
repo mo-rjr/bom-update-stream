@@ -15,7 +15,7 @@ import java.util.zip.ZipInputStream;
 
 /**
  * Simple handler that unzips files when given an input bucket, output bucket, and zip-file name
- *  -- to demonstrate problems with using ZipInputStream when the SDK closes the stream
+ *  -- to demonstrate that upgrade of bom is preventing unzipping of multiple items to an S3 bucket
  */
 public class UnzippingHandler {
 
